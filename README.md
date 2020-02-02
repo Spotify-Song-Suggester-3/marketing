@@ -1,10 +1,8 @@
 # marketing
 
-Group discussion: 
+	Name of App + Logo
 
-	Logo
-
-	Catch Phrase (Sub-title)
+	Sub-title
 
 	Four Features of app
 

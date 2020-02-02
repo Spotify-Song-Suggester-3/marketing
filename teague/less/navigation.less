@@ -1,46 +1,28 @@
 // Navigation Styles here
 
-.navigation{
-	padding: 20px 0px;
-	line-height: 50px;
-	display: flex;
+#content {
 
-	.logo {
-		font-family: @fun-font;
-		font-size: 36px;
-		font-weight: 600;
-		width: 70%;
-	}//logo image
-
-	nav {
+	nav{
+		font-family: 'Roboto', sans-serif;
 		width: 100%;
-		align-self: flex-end;
-		border: 1px red solid;
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 16px;
 
-		a {
-			padding: 0px 10px;
-			text-decoration: none;
-			color: black;
-			font-size: 24px;
-			width: 10%;
+		.box{
+			height: 100px;
+			width: 30%;
+			text-align: center;
 
-			span {
-				align-self: flex-start;
-			}
-		}//a	
-	}//nav 
-
-	@media @phone {
-		nav{
-
-			a{
-				padding: 0px;
-				border: 5px red solid;
+			.minibox{
+				width: 45%;
+				border: 1px orange solid;
 			}
 
-		}//nav
-	}//phone stlye
-	
+			img{
+				height: 45px;
 
-}//navigation
-
+			}
+		}
+	}
+}

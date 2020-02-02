@@ -1,0 +1,51 @@
+// Marketing Landing page
+
+#content{
+	height: 100vh;
+	background-image: url('../img/featuresBG.jpg');
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+
+	#intro{
+		background-color: rgba(255,255,255,0.5);
+		border: 1px pink solid;
+		height: 80vh;
+		width: 90vw;
+		margin: 0px auto;
+		display: none;
+	}
+
+	#features{
+
+		border: 1px pink solid;
+		height: 80vh;
+		width: 90vw;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin: 0px auto;
+
+		.box{
+			background-color: rgba(255,255,255,0.5);
+			width: 45%;
+			border: 1px cyan solid;
+			padding: 10px;
+			text-align: center;
+
+			&:hover{
+				background-color: rgba(0,0,0,0.1);
+			}
+
+			h2{
+				font-size: 4.2rem;
+
+			}
+			p{
+				font-size: 3rem
+			}
+		}//boxE
+	}//#features
+
+}
