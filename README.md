@@ -1,9 +1,6 @@
 # marketing
+Needs - 
 
-	Name of App + Logo
+	Four features of app
 
-	Sub-title
-
-	Four Features of app
-
-	Color scheme and Font
+	About page with credit given to group
