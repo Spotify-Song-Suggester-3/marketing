@@ -1,57 +1,66 @@
 // Marketing Landing page
 
 #content{
-	height: 100vh;
-	padding-top: 2vh;
-	background-image: url('../img/featuresBG.jpg');
+	height:100vh;
+	padding-top: 5vh;
+	background-image: url('../img/bg2.jpg');
 	background-color: black;
 	background-repeat: no-repeat;
 	background-size: cover;
 
 	#intro{
-		background-color: rgba(255,255,255,0.2);
+		border: 1px @mainRed solid;
+		background-color: @opacityBG;
 		width: 90vw;
-		height: 80vh;
+		height: @divHeight;
 		margin: 0px auto;
-
-
 	}
 
 	#features{
+		
 		width: 90vw;
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
 		margin: 0px auto;
-		background-color: rgba(0,0,0,0.5);
+		
 
 		//Scrollbar
-		padding-top: 100px;
-		height: 80vh;
-		overflow-y: scroll;
-
+		height: @divHeight;
+		overflow-y: auto;
 
 		.box{
-			background-color: rgba(255,255,255,0.5);
+			border: 1px @mainRed solid;
+			background-color: @opacityDarker;
 			width: 45%;
+			margin: auto;
 			padding: 10px;
 			text-align: center;
 
-			&:hover{
-				background-color: rgba(0,0,0,0.1);
-			}
-
 			h2{
 				font-size: 4.2rem;
-
 			}
 			p{
 				font-size: 3rem
 			}
-		}//boxE
-		
 
+			
+		}//box
 	}//#features
 
+	#team{
+		border: 1px @mainRed solid;
+		background-color: @opacityBG;
+		height: @divHeight;
+		width: 98vw;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin: 0px auto;
+	}
+
+	@media @phone {
+			
+	}
 
 }

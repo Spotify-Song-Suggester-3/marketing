@@ -184,11 +184,13 @@ img {
   margin: 0 auto;
 }
 #content nav {
-  border-top: 1px solid grey;
+  border-top: 1px solid #FB0004;
   font-family: 'Roboto', sans-serif;
   width: 100%;
   display: flex;
   justify-content: space-around;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), #000000);
+  padding-top: 25px;
   position: fixed;
   overflow: hidden;
   bottom: 0;
@@ -202,6 +204,7 @@ img {
   height: 100%;
   display: block;
   margin: 0px auto;
+  min-width: 216px;
 }
 #content nav .box2 {
   width: 60%;
@@ -209,12 +212,10 @@ img {
   display: flex;
   justify-content: space-around;
   padding-right: 3%;
+  line-height: 50px;
 }
 #content nav .box2 .miniBox {
   width: 30%;
-}
-#content nav .box2 img {
-  height: 100px;
 }
 #content nav .box3 {
   width: 20%;
@@ -223,14 +224,15 @@ img {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  width: 100%;
+  width: 80%;
   height: 75px;
-  font-size: 2rem;
+  font-size: 1rem;
   border: 1px black solid;
   border-radius: 10px;
   padding: 10px;
   background-color: #FB0004;
   color: #FFFFFF;
+  margin-top: -10px;
 }
 #content nav .box3 button:hover {
   background-color: rgba(0, 0, 0, 0);
@@ -240,6 +242,28 @@ img {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #EF01A0;
   color: #FFFFFF;
+}
+@media ( max-width: 500px ) {
+  #content nav {
+    padding-top: 0px;
+    height: 250px;
+    flex-direction: column;
+  }
+  #content nav .box1 {
+    height: 75px;
+    width: 100%;
+  }
+  #content nav .box2 {
+    height: 150px;
+    width: 100%;
+  }
+  #content nav .box3 {
+    width: 100%;
+  }
+  #content nav .box3 button {
+    height: 75px;
+    width: 100%;
+  }
 }
 .footer {
   width: 100%;
@@ -254,14 +278,15 @@ img {
 }
 #content {
   height: 100vh;
-  padding-top: 2vh;
-  background-image: url('../img/featuresBG.jpg');
+  padding-top: 5vh;
+  background-image: url('../img/bg2.jpg');
   background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #content #intro {
-  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px #FB0004 solid;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 90vw;
   height: 80vh;
   margin: 0px auto;
@@ -272,23 +297,30 @@ img {
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0px auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding-top: 100px;
   height: 80vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 #content #features .box {
-  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px #FB0004 solid;
+  background-color: rgba(0, 0, 0, 0.8);
   width: 45%;
+  margin: auto;
   padding: 10px;
   text-align: center;
-}
-#content #features .box:hover {
-  background-color: rgba(0, 0, 0, 0.1);
 }
 #content #features .box h2 {
   font-size: 4.2rem;
 }
 #content #features .box p {
   font-size: 3rem;
+}
+#content #team {
+  border: 1px #FB0004 solid;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 80vh;
+  width: 98vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0px auto;
 }

@@ -3,11 +3,13 @@
 #content {
 	
 	nav{
-		border-top: 1px solid grey;
+		border-top: 1px solid @mainRed;
 		font-family: 'Roboto', sans-serif;
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
+		background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,1));
+		padding-top: 25px;
 
 		//Bottom Nav
 		position: fixed;
@@ -19,15 +21,15 @@
 		//Logo Box
 		.box1{	
 			width: 20%;
+
 			img{
 				height: 100%;
 				display: block;
 				margin: 0px auto;
-	
+				min-width: 216px;
 			}//img
 		}//title
 		
-
 		//Nav items box
 		.box2{
 			width: 60%;
@@ -35,14 +37,10 @@
 			display: flex;
 			justify-content: space-around;
 			padding-right: 3%;
+			line-height: 50px;
 
 			.miniBox{
 				width: 30%;
-			}
-
-			img{
-				height: 100px;
-
 			}
 		}//box2
 
@@ -51,6 +49,34 @@
 			button{
 				.createAccountButton();
 			}
-		}
+		}//box3
+
+		@media @phone {
+			padding-top: 0px;
+			height: 250px;
+			flex-direction: column;
+
+			.box1{
+				height: 75px;
+				width: 100%;
+				
+			}//box1 - Phone
+
+			.box2{
+				height: 150px;
+				width: 100%;
+			}//box2 - Phone
+
+			.box3{
+				width: 100%;
+
+				button{
+					height: 75px;
+					width: 100%;
+				}
+			}//box3 - Phone
+
+		}//phone query
+
 	}//nav
-}
+}//content
