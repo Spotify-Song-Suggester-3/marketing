@@ -2,31 +2,34 @@
 <html>
 <head>
 <title>Marketing Page</title>
-
+<script src="js/jquery-3.4.1.min.js"></script>
 <style></style>
 <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
 
 <div id="content">
-	
-	<nav>
-		<div class="box">
-			<img src="img/logo.jpg" alt="(the coolest logo you've ever seen)">
-		</div>
 
-		<div class="box">
-			<div class="miniBox">
+	<nav>
+
+		<div class="box1">
+			<img src="img/logo.png" alt="(the coolest logo you've ever seen)">
+		</div>
+		<div class="box2">
+			<div class="miniBox" id="introNav">
 				<h2>Intro</h2>
 			</div>
-			<div class="miniBox">
+			<div class="miniBox" id="featuresNav">
 				<h2>Features</h2>
+			</div>
+			<div class="miniBox" id="teamNav">
+				<h2>The Team</h2>
 			</div>
 		</div>
 
-		<div class="box">
+		<div class="box3">
 			<button>
-			<h1>Create Account -></h1>
+			<h1>Get Started &#8594;</h1>
 			</button>
 		</div>
 	</nav>
@@ -34,7 +37,8 @@
 	<div id="intro">
 		<div class="box">
 			<h1>This is the intro!</h1>
-			<h3>with some subtext</h3>
+			<h3>with some subtext, quite a lot of subtext </h3>
+			<p>and a paragraph too, just full of wild unconventional text</p>
 		</div>
 		<div class="box">
 			<h2>Feature teaser</h2>
@@ -45,26 +49,59 @@
 
 	<div id="features">
 		<div class="box">
-			<h2>Feature 1</h2>
-			<p>This app is loaded with great features!</p>
+			<h2>Discover New Music!</h2>
+			<p>With this smart algorithmic app, we optimize machine learning to find songs that are related to your favorite tracks.</p>
 		</div>
 		<div class="box">
-			<h2>Feature 2</h2>
-			<p>This app is loaded with great features!</p>
-		</div>
-		<div class="box">
-			<h2>Feature 3</h2>
-			<p>This app is loaded with great features!</p>
+			<h2>Keep Track of Favorite Songs!</h2>
+			<p>Keep your favorite songs up to date, and the smart generated playlists will provide related songs to what your interests are.</p>
 		</div>	
 		<div class="box">
-			<h2>Feature 4</h2>
-			<p>This app is loaded with great features!</p>
+			<h2>Share with Friends!</h2>
+			<p>Send you smart generated playlists to all your friends, so they can check out your music.</p>
+		</div>
+		<div class="box">
+			<h2>Library of great songs</h2>
+			<p>Now you can find new you enjoy music easily, get started today!</p>
 		</div>
 	</div>
 
-
+	<div id="team">
+		<div class="title">
+			<h2>Spotify Song Suggester</h2>
+			<h4>Created by:</h4>
+		</div>
+	</div>
 
 </div>
+
+
+<script>
+$(document).ready(function() {
+	//Initial page
+	$("#intro").show();
+	$("#features").hide();
+	$("#team").hide();
+
+	$("#introNav").click(function() {
+		$("#intro").delay(250).fadeIn(250);
+		$("#features").fadeOut(250);
+		$("#team").fadeOut(250);
+	});
+
+	$("#featuresNav").click(function() {
+		$("#features").delay(250).fadeIn(250);
+		$("#intro").fadeOut(250);
+		$("#team").fadeOut(250);
+	});
+
+	$("#teamNav").click(function() {
+		$("#team").delay(250).fadeIn(250);
+		$("#intro").fadeOut(250);
+		$("#features").fadeOut(250);
+	});
+});
+</script>
 
 
 </body>

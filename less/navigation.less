@@ -1,28 +1,56 @@
 // Navigation Styles here
 
 #content {
-
+	
 	nav{
+		border-top: 1px solid grey;
 		font-family: 'Roboto', sans-serif;
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
+
+		//Bottom Nav
+		position: fixed;
+		overflow: hidden;
+		bottom: 0;
+		height: 100px;
 		padding-bottom: 16px;
 
-		.box{
-			height: 100px;
-			width: 30%;
-			text-align: center;
+		//Logo Box
+		.box1{	
+			width: 20%;
+			img{
+				height: 100%;
+				display: block;
+				margin: 0px auto;
+	
+			}//img
+		}//title
+		
 
-			.minibox{
-				width: 45%;
-				border: 1px orange solid;
+		//Nav items box
+		.box2{
+			width: 60%;
+			text-align: center;
+			display: flex;
+			justify-content: space-around;
+			padding-right: 3%;
+
+			.miniBox{
+				width: 30%;
 			}
 
 			img{
-				height: 45px;
+				height: 100px;
 
 			}
+		}//box2
+
+		.box3{
+			width: 20%;
+			button{
+				.createAccountButton();
+			}
 		}
-	}
+	}//nav
 }
