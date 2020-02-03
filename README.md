@@ -1,5 +1,4 @@
 # marketing
-Needs - 
 
 	Four features of app
 
