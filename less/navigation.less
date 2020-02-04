@@ -1,28 +1,81 @@
 // Navigation Styles here
 
 #content {
-
+	
 	nav{
+		border-top: 1px solid @mainRed;
 		font-family: 'Roboto', sans-serif;
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
+		background-image: @fadedOpacityBT;
+		padding-top: 25px;
+
+		//Bottom Nav
+		position: fixed;
+		overflow: hidden;
+		bottom: 0;
+		height: 100px;
 		padding-bottom: 16px;
 
-		.box{
-			height: 100px;
-			width: 30%;
-			text-align: center;
-
-			.minibox{
-				width: 45%;
-				border: 1px orange solid;
-			}
+		//Logo Box
+		.box1{	
+			width: 20%;
 
 			img{
-				height: 45px;
+				height: 100%;
+				display: block;
+				margin: 0px auto;
+				min-width: 216px;
+			}//img
+		}//title
+		
+		//Nav items box
+		.box2{
+			width: 60%;
+			text-align: center;
+			display: flex;
+			justify-content: space-around;
+			padding-right: 3%;
+			line-height: 50px;
 
+			.miniBox{
+				width: 30%;
 			}
-		}
-	}
-}
+		}//box2
+
+		.box3{
+			width: 20%;
+			button{
+				.createAccountButton();
+				h1{
+					font-size: 2.4rem;
+				}
+			}
+		}//box3
+
+		@media @phone {
+			padding-top: 0px;
+			height: 250px;
+			flex-direction: column;
+
+			.box1{
+				height: 75px;
+				width: 100%;
+				
+			}//box1 - Phone
+			.box2{
+				height: 150px;
+				width: 100%;
+			}//box2 - Phone
+			.box3{
+				width: 100%;
+				button{
+					height: 75px;
+					width: 100%;
+				}
+			}//box3 - Phone
+		}//phone query
+
+	}//nav
+}//content

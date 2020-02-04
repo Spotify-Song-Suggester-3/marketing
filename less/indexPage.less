@@ -1,51 +1,194 @@
 // Marketing Landing page
 
 #content{
-	height: 100vh;
-	background-image: url('../img/featuresBG.jpg');
+	height:100vh;
+	padding-top: 5vh;
+	background-image: url('../img/bg2.jpg');
 	background-color: black;
 	background-repeat: no-repeat;
 	background-size: cover;
 
-
 	#intro{
-		background-color: rgba(255,255,255,0.5);
-		border: 1px pink solid;
-		height: 80vh;
+		border: 1px grey solid;
+		background-color: @opacityDarker;
 		width: 90vw;
-		margin: 0px auto;
-		display: none;
-	}
+		max-width: 1920px;
+		max-height: 1080px;
+		height: @divHeight;
+		margin: 25px auto 0px auto;
+		text-align: center;
+
+		.titleSubtitle{
+			padding-top: 60px;
+			line-height: 12rem;
+			height: 40vh;
+			line-height: 12vh;
+			margin-top: 5vh;
+
+
+			h1{
+			width: 100%;
+			margin: 0px auto;
+			font-size: 10em;
+			}
+			h3{
+				font-size: 4rem;
+			}
+			p{
+				font-size: 2rem;
+			}
+		}//titleSubtitle
+
+		.leadIn{
+			float: right;
+			height: 29vh;
+			border: 1px orange solid;
+			width: 45vw;
+		}
+	}//intro
 
 	#features{
+		width: 90vw;
+		margin: 0px auto;
+		display: flex;
+		flex-direction: column;
+		
+		//Scrollbar
+		height: @divHeight;
+		overflow-y: auto;
 
-		border: 1px pink solid;
-		height: 80vh;
+		.box{
+			background-color: black;
+			border: 1px grey solid;
+			width: 60%;
+			margin: auto;
+			padding: 10px 50px;
+			text-align: center;
+			color: white;
+			border-radius: 30px;
+
+			h2{
+				color: white;
+				font-size: 4.2rem;
+				border-bottom: 1px solid grey;
+			}
+			p{
+				padding-top: 15px;
+				font-size: 2.5rem
+			}
+
+			
+		}//box
+	}//#features
+
+	#team{
+		height: @divHeight;
 		width: 90vw;
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
 		margin: 0px auto;
 
-		.box{
-			background-color: rgba(255,255,255,0.5);
-			width: 45%;
-			border: 1px cyan solid;
-			padding: 10px;
+		.title{
+			padding-top: 25px;
+			min-width: 500px;
+			height: 100px;
+			margin: 5px auto;
 			text-align: center;
+			background-color: @opacityDarker;
+			border-radius: 20px;
+		}
 
-			&:hover{
-				background-color: rgba(0,0,0,0.1);
+		.teamMembers{
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;	
+			color: black;
+
+			//Scrollbar
+			overflow-y: auto;
+
+			.photo{
+				width: 75px;
 			}
 
-			h2{
-				font-size: 4.2rem;
+			.column{
+				height: 50vh;
+				text-align: center;
+				font-size: 2.6rem;
+				line-height: 5rem;
+				width: 18%;
+				overflow-y: auto;
 
-			}
-			p{
-				font-size: 3rem
-			}
-		}//boxE
-	}//#features
+				.box{
+					background-color: rgba(255,255,255,0.75);	
+				}
 
-}
+				h2{
+					color: white;
+					background-color: rgba(0,0,0,0.5);
+					font-size: 3.4rem;
+				}
+
+				h3{
+					font-size: 2rem;
+				}
+			}//column
+		}//teamMembers
+	}//#team
+
+	@media @phone {
+		flex-direction: column;
+
+		#intro {
+			height: 40vh;
+
+			.titleSubtitle{
+				height: 100%;
+				h1{
+					font-size: 32px;
+				}
+				h3, p{
+					display: none;
+				}
+			}
+		}
+
+		#features {
+			height: 50vh;
+
+			.box{
+				margin: 6px 0px;
+				width: 100%;
+
+				h2{
+				color: white;
+					font-size: 4.2rem;
+				}
+				p{
+					font-size: 3rem
+				}
+			}
+		}//features
+
+		#team {
+			height: 100%;
+			overflow-y: auto;
+
+			.teamMembers{
+
+				flex-direction: column;
+				justify-content: normal;
+				flex-wrap: wrap;
+
+				.column{
+
+				}
+
+			
+			}
+		}//team
+	}//Phone Query
+
+}//content

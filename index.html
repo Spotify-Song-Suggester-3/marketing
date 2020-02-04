@@ -3,68 +3,177 @@
 <head>
 <title>Marketing Page</title>
 
-<style></style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="js/jquery-3.4.1.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/index.css">
+
 </head>
 <body>
 
 <div id="content">
-	
-	<nav>
-		<div class="box">
-			<img src="img/logo.jpg" alt="(the coolest logo you've ever seen)">
-		</div>
 
-		<div class="box">
-			<div class="miniBox">
+	<nav>
+		<div class="box1">
+			<img src="img/logo.png" alt="(the coolest logo you've ever seen)">
+		</div>
+		<div class="box2">
+			<div class="miniBox" id="introNav">
 				<h2>Intro</h2>
 			</div>
-			<div class="miniBox">
+			<div class="miniBox" id="featuresNav">
 				<h2>Features</h2>
 			</div>
+			<div class="miniBox" id="teamNav">
+				<h2>The Team</h2>
+			</div>
 		</div>
-
-		<div class="box">
+		<div class="box3">
 			<button>
-			<h1>Create Account -></h1>
+			<h1>Get Started</h1>
 			</button>
 		</div>
 	</nav>
 
 	<div id="intro">
-		<div class="box">
-			<h1>This is the intro!</h1>
-			<h3>with some subtext</h3>
-		</div>
-		<div class="box">
-			<h2>Feature teaser</h2>
-			<h4>cool playlist</h4>
-			<h4>even more... [>]</h4>
+		<div class="titleSubtitle">
+			<h1>Spotify Song Suggester</h1>
+			<h3>Generate Playlists related to your favorite songs!</h3>
+			<p>A smartserver will generate similar songs to your favorite tracks!</p>
 		</div>
 	</div>
 
 	<div id="features">
 		<div class="box">
-			<h2>Feature 1</h2>
-			<p>This app is loaded with great features!</p>
+			<h2>Discover New Music</h2>
+			<p>With this smart algorithmic app,
+			we use machine learning to find songs
+			that are related to your favorite tracks.</p>
 		</div>
 		<div class="box">
-			<h2>Feature 2</h2>
-			<p>This app is loaded with great features!</p>
-		</div>
-		<div class="box">
-			<h2>Feature 3</h2>
-			<p>This app is loaded with great features!</p>
+			<h2>Keep Track of Favorite Songs!</h2>
+			<p>Keep your favorite songs up to date, and the smart generated playlists will provide related songs to what your interests are.</p>
 		</div>	
 		<div class="box">
-			<h2>Feature 4</h2>
-			<p>This app is loaded with great features!</p>
+			<h2>Share with Friends!</h2>
+			<p>Send you smart generated playlists to all your friends, so they can check out your music.</p>
+		</div>
+		<div class="box">
+			<h2>Library of great songs</h2>
+			<p>Now you can find new you enjoy music easily, get started today!</p>
 		</div>
 	</div>
 
+	<div id="team">
 
+		<div class="title">
+			<h2>Spotify Song Suggester</h2>
+			<h4>- Created by -</h4>
+		</div>
+
+		<div class="teamMembers">
+
+			<div class="column">
+				<h2>Front-End</h2>
+				<div class="box">
+					<a href="">
+						<img src="img/gavin.jpg" alt="front end Gavin">
+						<h3>Gavin Stahl</h3>
+					</a>
+				</div>
+				<div class="box">
+					<a href="">
+						<img src="img/jasmine.jpg" alt="front end Jasmine">
+						<h3>Jasmine Terry</h3>
+					</a>
+				</div>
+				<div class="box">
+					<a href="">
+						<img src="img/henrey.jpg" alt="front end Henry">
+						<h3>Henry Ramirez</h3>
+					</a>
+				</div>
+				<div class="box">
+					<a href="">
+						<img src="img/teague.jpg" alt="front end Teague">
+						<h3>Teague Hannam</h3>
+					</a>
+				</div>
+			</div>
+
+			<div class="column">
+				<h2>Back-End</h2>
+				<div class="box">
+					<a href="back end Robin">
+						<img src="img/.jpg">
+						<h3>Robin Warden</h3>
+					</a>
+				</div>
+			</div>
+
+			<div class="column">
+				<h2>Data Engineers</h2>
+				<div class="box">
+					<a href="">
+						<img src="img/kevin.jpg" alt="data engineer Kevin">	
+						<h3>Kevin Liu</h3>
+					</a>
+				</div>
+				<div class="box">
+					<a href="">
+						<img src="img/baisali.jpg" alt="data engineer Baisali">
+						<h3>Baisali</h3>
+					</a>
+				</div>
+			</div>
+
+			<div class="column">
+				<h2>Machine Learning</h2>
+				<div class="box">
+					<a href="">
+						<img src="img/solomon.jpg" alt="machine learning Solomon">
+						<h3>Solomon</h3>
+					</a>
+				</div>
+				<div class="box">
+					<a href="">
+						<img src="img/niki.jpg" alt="machine learning Niki">
+						<h3>Niki Bhatt</h3>
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
 
 </div>
+
+
+<script>
+$(document).ready(function() {
+	//Initial page
+	$("#intro").show();
+	$("#features").hide();
+	$("#team").hide();
+
+	$("#introNav").click(function() {
+		$("#intro").delay(250).fadeIn(250);
+		$("#features").fadeOut(250);
+		$("#team").fadeOut(250);
+	});
+
+	$("#featuresNav").click(function() {
+		$("#features").delay(250).fadeIn(250);
+		$("#intro").fadeOut(250);
+		$("#team").fadeOut(250);
+	});
+
+	$("#teamNav").click(function() {
+		$("#team").delay(250).fadeIn(250);
+		$("#intro").fadeOut(250);
+		$("#features").fadeOut(250);
+	});
+});
+</script>
 
 
 </body>
