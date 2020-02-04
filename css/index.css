@@ -246,6 +246,31 @@ img {
 #content nav .box3 button h1 {
   font-size: 2.4rem;
 }
+@media ( max-width: 800px ) {
+  #content nav {
+    padding-top: 0px;
+    height: 250px;
+    flex-direction: column;
+  }
+  #content nav .box1 {
+    height: 75px;
+    width: 100%;
+  }
+  #content nav .box2 {
+    height: 150px;
+    width: 100%;
+  }
+  #content nav .box2 h2 {
+    font-size: 2.2rem;
+  }
+  #content nav .box3 {
+    width: 100%;
+  }
+  #content nav .box3 button {
+    height: 75px;
+    width: 100%;
+  }
+}
 @media ( max-width: 500px ) {
   #content nav {
     padding-top: 0px;
@@ -259,6 +284,9 @@ img {
   #content nav .box2 {
     height: 150px;
     width: 100%;
+  }
+  #content nav .box2 h2 {
+    font-size: 2.2rem;
   }
   #content nav .box3 {
     width: 100%;
@@ -355,6 +383,7 @@ img {
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0px auto;
+  overflow-y: auto;
 }
 #content #team .title {
   padding-top: 25px;
@@ -371,13 +400,13 @@ img {
   flex-wrap: wrap;
   justify-content: space-around;
   color: black;
-  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #content #team .teamMembers .photo {
   width: 75px;
 }
 #content #team .teamMembers .column {
-  height: 50vh;
+  height: auto;
   text-align: center;
   font-size: 2.6rem;
   line-height: 5rem;
@@ -385,7 +414,22 @@ img {
   overflow-y: auto;
 }
 #content #team .teamMembers .column .box {
-  background-color: rgba(255, 255, 255, 0.75);
+  margin: 15px 0px;
+  padding: 20px;
+  background-color: rgba(127, 127, 127, 0.5);
+}
+#content #team .teamMembers .column .box:hover {
+  opacity: 0.95;
+}
+#content #team .teamMembers .column .box:active {
+  opacity: 1;
+}
+#content #team .teamMembers .column .box a {
+  text-decoration: none;
+  color: white;
+}
+#content #team .teamMembers .column .box img {
+  width: 200px;
 }
 #content #team .teamMembers .column h2 {
   color: white;
@@ -394,6 +438,46 @@ img {
 }
 #content #team .teamMembers .column h3 {
   font-size: 2rem;
+}
+@media ( max-width: 800px ) {
+  #content #intro {
+    height: 60vh;
+  }
+  #content #intro .titleSubtitle h1 {
+    font-size: 4.4rem;
+  }
+  #content #intro .titleSubtitle h3 {
+    font-size: 2.8rem;
+  }
+  #content #intro .titleSubtitle p {
+    display: none;
+  }
+  #content #features {
+    width: 100%;
+    height: 60vh;
+  }
+  #content #features .box {
+    width: 80%;
+    margin: 10px auto;
+  }
+  #content #team {
+    height: 60vh;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    overflow-y: auto;
+  }
+  #content #team .title {
+    width: 50vw;
+  }
+  #content #team .teamMembers .column {
+    width: 90%;
+    height: auto;
+  }
+  #content #team .teamMembers .column .box {
+    width: 80%;
+    margin: 5px auto;
+  }
 }
 @media ( max-width: 500px ) {
   #content {
@@ -421,18 +505,23 @@ img {
   }
   #content #features .box h2 {
     color: white;
-    font-size: 4.2rem;
+    font-size: 2.2rem;
   }
   #content #features .box p {
-    font-size: 3rem;
+    font-size: 1.6rem;
   }
   #content #team {
-    height: 100%;
+    height: 60vh;
+    width: 100%;
     overflow-y: auto;
-  }
-  #content #team .teamMembers {
-    flex-direction: column;
-    justify-content: normal;
     flex-wrap: wrap;
+    margin: 0px auto;
+  }
+  #content #team .title {
+    display: none;
+  }
+  #content #team .teamMembers .column {
+    width: 100%;
+    height: auto;
   }
 }
