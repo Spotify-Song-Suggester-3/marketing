@@ -1,3 +1,4 @@
 # marketing
 
-	About page with credit given to group
+	photos for about page
+	

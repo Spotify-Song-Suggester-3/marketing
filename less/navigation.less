@@ -8,7 +8,7 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
-		background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,1));
+		background-image: @fadedOpacityBT;
 		padding-top: 25px;
 
 		//Bottom Nav
@@ -48,6 +48,9 @@
 			width: 20%;
 			button{
 				.createAccountButton();
+				h1{
+					font-size: 2.4rem;
+				}
 			}
 		}//box3
 
@@ -61,21 +64,17 @@
 				width: 100%;
 				
 			}//box1 - Phone
-
 			.box2{
 				height: 150px;
 				width: 100%;
 			}//box2 - Phone
-
 			.box3{
 				width: 100%;
-
 				button{
 					height: 75px;
 					width: 100%;
 				}
 			}//box3 - Phone
-
 		}//phone query
 
 	}//nav
