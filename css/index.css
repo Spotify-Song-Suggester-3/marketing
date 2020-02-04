@@ -213,9 +213,17 @@ img {
   justify-content: space-around;
   padding-right: 3%;
   line-height: 50px;
+  cursor: pointer;
 }
 #content nav .box2 .miniBox {
   width: 30%;
+}
+#content nav .box2 .miniBox:hover {
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 32px;
+}
+#content nav .box2 .miniBox:active {
+  color: rgba(255, 255, 255, 0.25);
 }
 #content nav .box3 {
   width: 20%;
@@ -433,7 +441,6 @@ img {
 }
 #content #team .teamMembers .column h2 {
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
   font-size: 3.4rem;
 }
 #content #team .teamMembers .column h3 {
