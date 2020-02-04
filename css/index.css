@@ -392,6 +392,7 @@ img {
   flex-wrap: wrap;
   margin: 0px auto;
   overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 #content #team .title {
   padding-top: 25px;
@@ -399,7 +400,6 @@ img {
   height: 100px;
   margin: 5px auto;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 20px;
 }
 #content #team .teamMembers {
@@ -408,7 +408,6 @@ img {
   flex-wrap: wrap;
   justify-content: space-around;
   color: black;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 #content #team .teamMembers .photo {
   width: 75px;
