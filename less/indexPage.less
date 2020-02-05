@@ -51,6 +51,8 @@
 		margin: 0px auto;
 		display: flex;
 		flex-direction: column;
+		max-width: 1920px;
+		max-height: 1080px;
 		
 		//Scrollbar
 		height: @divHeight;
@@ -115,32 +117,38 @@
 				height: auto;
 				text-align: center;
 				font-size: 2.6rem;
-				line-height: 5rem;
-				width: 18%;
+				line-height: 4.2rem;
+				width: 20%;
 				overflow-y: auto;
 
 				.box{
-					margin: 15px 0px;
+					margin: 15px auto;
 					padding: 20px;
-					background-color: rgba(127,127,127,0.5);
-
-					&:hover{
-						opacity: 0.95;
-					}
-
-					&:active{
-						opacity: 1;
-					}
-					
+					border-radius: 8px;
+					width: 75%;
+					opacity: 0.95;
+					background-color: rgba(127,127,127,0.8);					
 
 					a{
 						text-decoration: none;
 						color: white;
-					}
+						opacity: 0.9;
+
+						&:hover{
+							opacity: 1;
+						}
+
+						&:active{
+							opacity: 1;							
+						}
+					}//a
 
 					img{
-						width: 200px;
-					}	
+						width: 90%;
+						max-height: 200px;
+						max-width: 200px;
+						border-radius: 24px;
+					}//img
 
 				}//box
 

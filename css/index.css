@@ -206,6 +206,9 @@ img {
   margin: 0px auto;
   min-width: 216px;
 }
+#content nav .box1 img:hover {
+  opacity: 0.8;
+}
 #content nav .box2 {
   width: 60%;
   text-align: center;
@@ -362,6 +365,8 @@ img {
   margin: 0px auto;
   display: flex;
   flex-direction: column;
+  max-width: 1920px;
+  max-height: 1080px;
   height: 80vh;
   overflow-y: auto;
 }
@@ -416,27 +421,34 @@ img {
   height: auto;
   text-align: center;
   font-size: 2.6rem;
-  line-height: 5rem;
-  width: 18%;
+  line-height: 4.2rem;
+  width: 20%;
   overflow-y: auto;
 }
 #content #team .teamMembers .column .box {
-  margin: 15px 0px;
+  margin: 15px auto;
   padding: 20px;
-  background-color: rgba(127, 127, 127, 0.5);
-}
-#content #team .teamMembers .column .box:hover {
+  border-radius: 8px;
+  width: 75%;
   opacity: 0.95;
-}
-#content #team .teamMembers .column .box:active {
-  opacity: 1;
+  background-color: rgba(127, 127, 127, 0.8);
 }
 #content #team .teamMembers .column .box a {
   text-decoration: none;
   color: white;
+  opacity: 0.9;
+}
+#content #team .teamMembers .column .box a:hover {
+  opacity: 1;
+}
+#content #team .teamMembers .column .box a:active {
+  opacity: 1;
 }
 #content #team .teamMembers .column .box img {
-  width: 200px;
+  width: 90%;
+  max-height: 200px;
+  max-width: 200px;
+  border-radius: 24px;
 }
 #content #team .teamMembers .column h2 {
   color: white;
