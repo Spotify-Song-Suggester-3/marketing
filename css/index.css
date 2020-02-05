@@ -206,6 +206,9 @@ img {
   margin: 0px auto;
   min-width: 216px;
 }
+#content nav .box1 img:hover {
+  opacity: 0.8;
+}
 #content nav .box2 {
   width: 60%;
   text-align: center;
@@ -213,9 +216,17 @@ img {
   justify-content: space-around;
   padding-right: 3%;
   line-height: 50px;
+  cursor: pointer;
 }
 #content nav .box2 .miniBox {
   width: 30%;
+}
+#content nav .box2 .miniBox:hover {
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 32px;
+}
+#content nav .box2 .miniBox:active {
+  color: rgba(255, 255, 255, 0.25);
 }
 #content nav .box3 {
   width: 20%;
@@ -246,6 +257,31 @@ img {
 #content nav .box3 button h1 {
   font-size: 2.4rem;
 }
+@media ( max-width: 800px ) {
+  #content nav {
+    padding-top: 0px;
+    height: 250px;
+    flex-direction: column;
+  }
+  #content nav .box1 {
+    height: 75px;
+    width: 100%;
+  }
+  #content nav .box2 {
+    height: 150px;
+    width: 100%;
+  }
+  #content nav .box2 h2 {
+    font-size: 2.2rem;
+  }
+  #content nav .box3 {
+    width: 100%;
+  }
+  #content nav .box3 button {
+    height: 75px;
+    width: 100%;
+  }
+}
 @media ( max-width: 500px ) {
   #content nav {
     padding-top: 0px;
@@ -259,6 +295,9 @@ img {
   #content nav .box2 {
     height: 150px;
     width: 100%;
+  }
+  #content nav .box2 h2 {
+    font-size: 2.2rem;
   }
   #content nav .box3 {
     width: 100%;
@@ -326,6 +365,8 @@ img {
   margin: 0px auto;
   display: flex;
   flex-direction: column;
+  max-width: 1920px;
+  max-height: 1080px;
   height: 80vh;
   overflow-y: auto;
 }
@@ -355,6 +396,8 @@ img {
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0px auto;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 #content #team .title {
   padding-top: 25px;
@@ -362,7 +405,6 @@ img {
   height: 100px;
   margin: 5px auto;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 20px;
 }
 #content #team .teamMembers {
@@ -371,29 +413,89 @@ img {
   flex-wrap: wrap;
   justify-content: space-around;
   color: black;
-  overflow-y: auto;
 }
 #content #team .teamMembers .photo {
   width: 75px;
 }
 #content #team .teamMembers .column {
-  height: 50vh;
+  height: auto;
   text-align: center;
   font-size: 2.6rem;
-  line-height: 5rem;
-  width: 18%;
+  line-height: 4.2rem;
+  width: 20%;
   overflow-y: auto;
 }
 #content #team .teamMembers .column .box {
-  background-color: rgba(255, 255, 255, 0.75);
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 75%;
+  opacity: 0.95;
+  background-color: rgba(127, 127, 127, 0.8);
+}
+#content #team .teamMembers .column .box a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.9;
+}
+#content #team .teamMembers .column .box a:hover {
+  opacity: 1;
+}
+#content #team .teamMembers .column .box a:active {
+  opacity: 1;
+}
+#content #team .teamMembers .column .box img {
+  width: 90%;
+  max-height: 200px;
+  max-width: 200px;
+  border-radius: 24px;
 }
 #content #team .teamMembers .column h2 {
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
   font-size: 3.4rem;
 }
 #content #team .teamMembers .column h3 {
   font-size: 2rem;
+}
+@media ( max-width: 800px ) {
+  #content #intro {
+    height: 60vh;
+  }
+  #content #intro .titleSubtitle h1 {
+    font-size: 4.4rem;
+  }
+  #content #intro .titleSubtitle h3 {
+    font-size: 2.8rem;
+  }
+  #content #intro .titleSubtitle p {
+    display: none;
+  }
+  #content #features {
+    width: 100%;
+    height: 60vh;
+  }
+  #content #features .box {
+    width: 80%;
+    margin: 10px auto;
+  }
+  #content #team {
+    height: 60vh;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    overflow-y: auto;
+  }
+  #content #team .title {
+    width: 50vw;
+  }
+  #content #team .teamMembers .column {
+    width: 90%;
+    height: auto;
+  }
+  #content #team .teamMembers .column .box {
+    width: 80%;
+    margin: 5px auto;
+  }
 }
 @media ( max-width: 500px ) {
   #content {
@@ -421,18 +523,23 @@ img {
   }
   #content #features .box h2 {
     color: white;
-    font-size: 4.2rem;
+    font-size: 2.2rem;
   }
   #content #features .box p {
-    font-size: 3rem;
+    font-size: 1.6rem;
   }
   #content #team {
-    height: 100%;
+    height: 60vh;
+    width: 100%;
     overflow-y: auto;
-  }
-  #content #team .teamMembers {
-    flex-direction: column;
-    justify-content: normal;
     flex-wrap: wrap;
+    margin: 0px auto;
+  }
+  #content #team .title {
+    display: none;
+  }
+  #content #team .teamMembers .column {
+    width: 100%;
+    height: auto;
   }
 }
