@@ -66,12 +66,6 @@
 	</div>
 
 	<div id="team">
-
-		<div class="title">
-			<h2>Spotify Song Suggester</h2>
-			<h4>- Created by -</h4>
-		</div>
-
 		<div class="teamMembers">
 
 			<div class="column">
@@ -82,17 +76,17 @@
 						<h3>Eralp Kor</h3>
 					</a>
 				</div>
-				<h2>Back-End</h2>
 				<div class="box">
 					<a href="https://github.com/Code4Blessings" target="_blank">
 						<img src="img/robin.jpg" alt="back end Robin">
 						<h3>Robin Warden</h3>
 					</a>
 				</div>
+				<h2>Back-End</h2>
 			</div>
 
 			<div class="column">
-				<h2>Front-End</h2>
+				<h2>&nbsp</h2>
 				<div class="box">
 					<a href="https://github.com/stahlgazer" target="_blank">
 						<img src="img/gavin.jpg" alt="front end Gavin">
@@ -105,6 +99,11 @@
 						<h3>Jasmine Terry</h3>
 					</a>
 				</div>
+				<h2>Front End</h2>
+			</div>	
+
+			<div class="column">	
+				<h2>&nbsp</h2>	
 				<div class="box">
 					<a href="https://github.com/mwhyte18" target="_blank">
 						<img src="img/marco.jpg" alt="front end Marco">
@@ -117,10 +116,11 @@
 						<h3>Teague Hannam</h3>
 					</a>
 				</div>
-			</div>			
+				<h2>Front End</h2>
+			</div>
 
 			<div class="column">
-				<h2>Data Engineers</h2>
+				<h2>&nbsp</h2>
 				<div class="box">
 					<a href="https://github.com/Baisalis" target="_blank">
 						<img src="img/baisali.jpg" alt="data engineer Baisali">
@@ -133,10 +133,11 @@
 						<h3>Kevin Liu</h3>
 					</a>
 				</div>
+				<h2>Data Engineers</h2>
 			</div>
 
 			<div class="column">
-				<h2>Machine Learning</h2>
+				<h2>&nbsp</h2>
 				<div class="box">
 					<a href="https://github.com/Solomon147" target="_blank">
 						<img src="img/solomon.jpg" alt="machine learning Solomon">
@@ -149,6 +150,7 @@
 						<h3>Niki Bhatt</h3>
 					</a>
 				</div>
+				<h2>Machine Learning</h2>
 			</div>
 
 		</div>
@@ -161,25 +163,28 @@
 $(document).ready(function() {
 	//Initial page
 	$("#intro").show();
-	$("#features").hide();
-	$("#team").hide();
+
+	const timing = 300;
+	const fadein = timing + (timing / 2);
+	const doubleTiming = timing * 2;
+
 
 	$("#introNav").click(function() {
-		$("#intro").delay(250).fadeIn(250);
-		$("#features").fadeOut(250);
-		$("#team").fadeOut(250);
+		$("#intro").delay(timing-1).fadeIn(fadein);
+		$("#features").fadeOut(timing);
+		$("#team").fadeOut(timing);
 	});
 
 	$("#featuresNav").click(function() {
-		$("#features").delay(250).fadeIn(250);
-		$("#intro").fadeOut(250);
-		$("#team").fadeOut(250);
+		$("#features").delay(timing-1).fadeIn(fadein);
+		$("#intro").fadeOut(timing);
+		$("#team").fadeOut(timing);
 	});
 
 	$("#teamNav").click(function() {
-		$("#team").delay(250).fadeIn(250);
-		$("#intro").fadeOut(250);
-		$("#features").fadeOut(250);
+		$("#team").delay(timing-1).fadeIn(fadein);
+		$("#intro").fadeOut(timing);
+		$("#features").fadeOut(timing);
 	});
 });
 </script>
