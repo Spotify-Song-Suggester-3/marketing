@@ -184,6 +184,7 @@ img {
   margin: 0 auto;
 }
 #content nav {
+  z-index: 100;
   border-top: 1px solid #FB0004;
   font-family: 'Roboto', sans-serif;
   width: 100%;
@@ -327,29 +328,29 @@ img {
   background-size: cover;
 }
 #content #intro {
-  border: 1px grey solid;
+  border: 25px rgba(100, 200, 100, 0.5) solid;
   background-color: rgba(0, 0, 0, 0.8);
-  width: 90vw;
-  max-width: 1920px;
-  max-height: 1080px;
-  height: 80vh;
+  max-width: 1280px;
+  max-height: 720px;
+  height: 55vh;
   margin: 25px auto 0px auto;
   text-align: center;
+  border-radius: 8px;
 }
 #content #intro .titleSubtitle {
   padding-top: 60px;
-  line-height: 12rem;
-  height: 40vh;
+  line-height: 10rem;
+  max-height: 800px;
   line-height: 12vh;
   margin-top: 5vh;
 }
 #content #intro .titleSubtitle h1 {
   width: 100%;
   margin: 0px auto;
-  font-size: 10em;
+  font-size: 8em;
 }
 #content #intro .titleSubtitle h3 {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 #content #intro .titleSubtitle p {
   font-size: 2rem;
@@ -367,14 +368,15 @@ img {
   flex-direction: column;
   max-width: 1920px;
   max-height: 1080px;
-  height: 80vh;
+  height: 80%;
   overflow-y: auto;
+  display: none;
 }
 #content #features .box {
   background-color: black;
   border: 1px grey solid;
   width: 60%;
-  margin: auto;
+  margin: 50px auto;
   padding: 10px 50px;
   text-align: center;
   color: white;
@@ -390,7 +392,9 @@ img {
   font-size: 2.5rem;
 }
 #content #team {
+  z-index: 10;
   height: 80vh;
+  max-height: 1500px;
   width: 90vw;
   display: flex;
   justify-content: space-around;
@@ -398,14 +402,7 @@ img {
   margin: 0px auto;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.6);
-}
-#content #team .title {
-  padding-top: 25px;
-  min-width: 500px;
-  height: 100px;
-  margin: 5px auto;
-  text-align: center;
-  border-radius: 20px;
+  display: none;
 }
 #content #team .teamMembers {
   width: 100%;
