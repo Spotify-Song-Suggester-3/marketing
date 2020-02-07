@@ -232,7 +232,10 @@ img {
 #content nav .box3 {
   width: 20%;
 }
-#content nav .box3 button {
+#content nav .box3 a {
+  text-decoration: none;
+}
+#content nav .box3 a button {
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -246,16 +249,16 @@ img {
   color: #FFFFFF;
   margin-top: -10px;
 }
-#content nav .box3 button:hover {
+#content nav .box3 a button:hover {
   background-color: rgba(0, 0, 0, 0);
   color: #FB0004;
 }
-#content nav .box3 button:active {
+#content nav .box3 a button:active {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #EF01A0;
   color: #FFFFFF;
 }
-#content nav .box3 button h1 {
+#content nav .box3 a h1 {
   font-size: 2.4rem;
 }
 @media ( max-width: 800px ) {
