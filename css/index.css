@@ -284,6 +284,7 @@ img {
   #content nav .box3 button {
     height: 75px;
     width: 100%;
+    margin: 0px auto;
   }
 }
 @media ( max-width: 500px ) {
